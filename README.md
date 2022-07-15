@@ -8,9 +8,9 @@ An extensible shared ESLint config for Re:Earth projects
 npm install eslint prettier eslint-config-reearth --save-dev
 ```
 
-Then edit `.eslintrc.js`:
+Then edit your ESLint config file:
 
-```
+```js
 module.exports = {
   extends: ["reearth"]
 };
