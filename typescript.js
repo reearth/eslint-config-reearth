@@ -7,10 +7,7 @@ module.exports = {
     browser: true,
   },
   plugins: ["@typescript-eslint"],
-  extends: [
-    "plugin:import/typescript",
-    "plugin:@typescript-eslint/recommended",
-  ],
+  extends: ["plugin:import/typescript", "plugin:@typescript-eslint/recommended"],
   rules: {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/interface-name-prefix": "off",
@@ -25,10 +22,7 @@ module.exports = {
     ],
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/prefer-optional-chain": "warn",
-    "@typescript-eslint/ban-types": [
-      "error",
-      { extendDefaults: true, types: { "{}": false } },
-    ],
+    "@typescript-eslint/ban-types": ["error", { extendDefaults: true, types: { "{}": false } }],
     "import/no-unresolved": "off",
     "no-undef": "off",
   },

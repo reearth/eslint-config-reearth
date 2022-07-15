@@ -3,7 +3,7 @@ module.exports = {
   overrides: [
     {
       files: ["*.js", "*.cjs"],
-      extends: ["./node", "./commonjs"],
+      extends: ["./node-commonjs"],
     },
     {
       files: ["*.mjs"],

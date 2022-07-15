@@ -7,5 +7,6 @@ module.exports = {
   rules: {
     "node/no-unpublished-require": "off",
     "node/no-unpublished-import": "off",
+    "node/no-unsupported-features/es-syntax": ["error", { ignores: ["modules"] }],
   },
 };

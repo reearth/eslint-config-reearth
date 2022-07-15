@@ -23,6 +23,7 @@ module.exports = {
 - [reearth/commonjs](./commonjs.js)
 - [reearth/typescript](./typescript.js)
 - [reearth/node](./node.js)
+- [reearth/node-commonjs](./node-commonjs.js)
 - [reearth/react](./react.js)
 - [reearth/test](./test.js)
 - [reearth/test-react](./test-react.js)
