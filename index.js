@@ -10,8 +10,12 @@ module.exports = {
       extends: [require.resolve("./node")],
     },
     {
-      files: ["*.ts"],
+      files: ["*.ts", "*.mts"],
       extends: [require.resolve("./typescript")],
+    },
+    {
+      files: ["*.cts"],
+      extends: [require.resolve("./typescript"), require.resolve("./commonjs")],
     },
     {
       files: ["*.tsx"],
