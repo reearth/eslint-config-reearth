@@ -15,6 +15,7 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "import/first": "warn",
+    "import/namespace": "off",
     "import/newline-after-import": "warn",
     "import/no-named-as-default": "off",
     "import/order": [
