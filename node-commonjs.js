@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["./node", "./commonjs"],
+  extends: [require.resolve("./node"), require.resolve("./commonjs")],
   rules: {
     "node/no-missing-import": "error",
     "node/no-missing-require": "error",

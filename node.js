@@ -1,8 +1,8 @@
 module.exports = {
+  extends: ["plugin:node/recommended"],
   env: {
     node: true,
   },
-  extends: ["plugin:node/recommended"],
   plugins: ["node"],
   rules: {
     "node/no-missing-import": "off",

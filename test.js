@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["./node"],
+  extends: [require.resolve("./node")],
   plugins: ["testing-library"],
   rules: {
     "no-restricted-globals": [

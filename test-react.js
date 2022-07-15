@@ -1,3 +1,6 @@
 module.exports = {
-  extends: ["./test", "plugin:testing-library/react"],
+  extends: [require.resolve("./test"), "plugin:testing-library/react"],
+  env: {
+    browser: true,
+  },
 };
