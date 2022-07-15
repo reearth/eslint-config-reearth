@@ -34,6 +34,6 @@ module.exports = {
         },
       },
     ],
-    "prettier/prettier": "warn",
+    "prettier/prettier": ["warn", require("./.prettierrc.json")],
   },
 };
