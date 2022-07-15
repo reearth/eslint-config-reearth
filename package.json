@@ -1,0 +1,36 @@
+{
+  "name": "eslint-config-reearth",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/reearth/eslint-config-reearth.git",
+  "author": "rot1024 <aayhrot@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "eslint --fix ."
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "peerDependencies": {
+    "eslint": "*",
+    "prettier": "*",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-testing-library": "^5.5.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}
