@@ -1,45 +1,41 @@
 module.exports = {
-  extends: [require.resolve("./common")],
+  extends: ["./common"],
   overrides: [
     {
       files: ["*.js", "*.cjs"],
-      extends: [require.resolve("./node-commonjs")],
+      extends: ["./node-commonjs"],
     },
     {
       files: ["*.mjs"],
-      extends: [require.resolve("./node")],
+      extends: ["./node"],
     },
     {
       files: ["*.ts", "*.mts"],
-      extends: [require.resolve("./typescript")],
+      extends: ["./typescript"],
     },
     {
       files: ["*.cts"],
-      extends: [require.resolve("./typescript"), require.resolve("./commonjs")],
+      extends: ["./typescript", "./commonjs"],
     },
     {
       files: ["*.tsx"],
-      extends: [require.resolve("./typescript"), require.resolve("./react")],
+      extends: ["./typescript", "./react"],
     },
     {
       files: ["**/?(*.)+(spec|test).js"],
-      extends: [require.resolve("./test")],
+      extends: ["./test"],
     },
     {
       files: ["**/?(*.)+(spec|test).jsx"],
-      extends: [require.resolve("./test-react")],
+      extends: ["./test-react"],
     },
     {
       files: ["**/?(*.)+(spec|test).ts"],
-      extends: [require.resolve("./typescript"), require.resolve("./test")],
+      extends: ["./typescript", "./test"],
     },
     {
       files: ["**/?(*.)+(spec|test).tsx"],
-      extends: [
-        require.resolve("./typescript"),
-        require.resolve("./react"),
-        require.resolve("./test-react"),
-      ],
+      extends: ["./typescript", "./react", "./test-react"],
     },
   ],
 };

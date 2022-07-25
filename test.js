@@ -1,4 +1,4 @@
 module.exports = {
-  extends: [require.resolve("./node")],
+  extends: ["./node"],
   plugins: ["testing-library"],
 };
