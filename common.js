@@ -2,22 +2,16 @@ module.exports = {
   env: {
     es6: true,
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:import/recommended",
-    "plugin:import/warnings",
-  ],
+  extends: ["eslint:recommended", "plugin:prettier/recommended"],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["prettier"],
+  plugins: ["import", "prettier"],
   rules: {
     "import/first": "warn",
-    "import/namespace": "off",
     "import/newline-after-import": "warn",
-    "import/no-named-as-default": "off",
+    "import/no-duplicates": ["warn", { considerQueryString: true }],
     "import/order": [
       "warn",
       {

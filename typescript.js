@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
   },
   plugins: ["@typescript-eslint"],
-  extends: ["plugin:import/typescript", "plugin:@typescript-eslint/recommended"],
+  extends: ["plugin:@typescript-eslint/recommended", "plugin:import/typescript"],
   rules: {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/interface-name-prefix": "off",
