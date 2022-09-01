@@ -1,16 +1,8 @@
 module.exports = {
-  extends: ["./common"],
+  extends: ["./common", "./react"],
   overrides: [
     {
-      files: ["*.js", "*.cjs"],
-      extends: ["./node-commonjs"],
-    },
-    {
-      files: ["*.mjs"],
-      extends: ["./node"],
-    },
-    {
-      files: ["*.ts", "*.mts"],
+      files: ["*.ts", "*.mts", "*.tsx"],
       extends: ["./typescript"],
     },
     {
@@ -18,24 +10,12 @@ module.exports = {
       extends: ["./typescript", "./commonjs"],
     },
     {
-      files: ["*.tsx"],
-      extends: ["./typescript", "./react"],
-    },
-    {
-      files: ["**/?(*.)+(spec|test).js"],
-      extends: ["./test"],
-    },
-    {
-      files: ["**/?(*.)+(spec|test).jsx"],
+      files: ["**/?(*.)+(spec|test).jsx?"],
       extends: ["./test-react"],
     },
     {
-      files: ["**/?(*.)+(spec|test).ts"],
-      extends: ["./typescript", "./test"],
-    },
-    {
-      files: ["**/?(*.)+(spec|test).tsx"],
-      extends: ["./typescript", "./react", "./test-react"],
+      files: ["**/?(*.)+(spec|test).tsx?"],
+      extends: ["./typescript", "./test-react"],
     },
   ],
 };
