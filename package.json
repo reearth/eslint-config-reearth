@@ -10,7 +10,7 @@
     "format": "eslint --fix ."
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=v18.16.1"
   },
   "peerDependencies": {
     "eslint": "*",
