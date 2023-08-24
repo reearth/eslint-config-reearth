@@ -18,7 +18,8 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-use-before-define": "off",
-    "@typescript-eslint/prefer-optional-chain": "warn",
+    // TODO: Error: Error while loading rule '@typescript-eslint/prefer-optional-chain': You have used a rule which requires parserServices to be generated. You must therefore provide a value for the "parserOptions.project" property for @typescript-eslint/parser.
+    // "@typescript-eslint/prefer-optional-chain": "warn",
     "@typescript-eslint/ban-types": ["error", { extendDefaults: true, types: { "{}": false } }],
     "import/no-unresolved": "off",
     "no-undef": "off",

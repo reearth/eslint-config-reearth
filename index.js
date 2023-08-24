@@ -10,6 +10,10 @@ module.exports = {
       extends: ["./typescript", "./commonjs"],
     },
     {
+      files: ["*.cjs"],
+      extends: ["./commonjs"],
+    },
+    {
       files: ["**/?(*.)+(spec|test).jsx?"],
       extends: ["./test-react"],
     },
