@@ -24,6 +24,18 @@ module.exports = {
 - [reearth/typescript](./typescript.js)
 - [reearth/node](./node.js)
 - [reearth/node-commonjs](./node-commonjs.js)
+- [reearth/noprettier](./noprettier.js)
+- [reearth/prettier](./prettier.js)
 - [reearth/react](./react.js)
 - [reearth/test](./test.js)
 - [reearth/test-react](./test-react.js)
+
+## Flat config
+
+```js
+import config from "eslint-config-reearth/flat";
+
+export default config;
+```
+
+See [`flat`](flat) dir. Currently only config that uses `.mjs` is supported. Prettier is no longer enabled by default, but is opt-in.
