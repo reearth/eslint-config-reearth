@@ -12,7 +12,7 @@ Then edit your ESLint config file:
 
 ```js
 module.exports = {
-  extends: ["reearth"]
+  extends: ["reearth"],
 };
 ```
 

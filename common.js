@@ -2,12 +2,12 @@ module.exports = {
   env: {
     es6: true,
   },
-  extends: ["eslint:recommended", "plugin:prettier/recommended"],
+  extends: ["eslint:recommended"],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["import", "prettier"],
+  plugins: ["import"],
   rules: {
     "import/first": "warn",
     "import/newline-after-import": "warn",
@@ -30,6 +30,5 @@ module.exports = {
         },
       },
     ],
-    "prettier/prettier": ["warn", require("./.prettierrc.json")],
   },
 };
