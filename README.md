@@ -10,6 +10,19 @@ npm install eslint prettier eslint-config-reearth --save-dev
 
 Then edit your ESLint config file:
 
+### Flat config (`eslint.config.mjs`)
+
+```js
+import config from "eslint-config-reearth/flat/index.mjs";
+
+/** @type { import("eslint").Linter.FlatConfig[] } */
+export default [...config];
+```
+
+See [`flat`](flat) dir. Currently only config that uses `.mjs` is supported. Prettier is no longer enabled by default, but is opt-in.
+
+### Legacy (`.eslintrc.js`)
+
 ```js
 module.exports = {
   extends: ["reearth"],
@@ -29,13 +42,3 @@ module.exports = {
 - [reearth/react](./react.js)
 - [reearth/test](./test.js)
 - [reearth/test-react](./test-react.js)
-
-## Flat config
-
-```js
-import config from "eslint-config-reearth/flat";
-
-export default config;
-```
-
-See [`flat`](flat) dir. Currently only config that uses `.mjs` is supported. Prettier is no longer enabled by default, but is opt-in.

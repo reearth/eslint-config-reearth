@@ -1,10 +1,11 @@
+import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 
-const compat = new FlatCompat();
+const flatCompat = new FlatCompat();
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
-  ...compat.extends("plugin:node/recommended"),
+  ...fixupConfigRules(flatCompat.extends("plugin:node/recommended")),
   {
     rules: {
       "node/no-missing-import": "off",

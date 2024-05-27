@@ -1,10 +1,11 @@
+import { fixupPluginRules } from "@eslint/compat";
 import eslintImport from "eslint-plugin-import";
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
   {
     plugins: {
-      import: eslintImport,
+      import: fixupPluginRules(eslintImport),
     },
     rules: {
       "import/first": "warn",
