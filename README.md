@@ -1,44 +1,55 @@
 # eslint-config-reearth
 
-An extensible shared ESLint config for Re:Earth projects
+An extensible shared ESLint config for Re:Earth projects (ESlint v9+)
 
 ## How to install
 
 ```
 npm install eslint prettier eslint-config-reearth --save-dev
+yarn add eslint prettier eslint-config-reearth --dev
 ```
 
 Then edit your ESLint config file:
 
-### Flat config (`eslint.config.mjs`)
+### ESLint config (`eslint.config.mjs`)
 
 ```js
-import config from "eslint-config-reearth/flat/index.mjs";
+import config from "eslint-config-reearth";
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [...config];
 ```
 
-See [`flat`](flat) dir. Currently only config that uses `.mjs` is supported. Prettier is no longer enabled by default, but is opt-in.
+- Only config that uses `.mjs` is supported.
+- Legacy config (`.eslintrc`) is no longer supported.
 
-### Legacy (`.eslintrc.js`)
+## package.json scripts (example)
 
-```js
-module.exports = {
-  extends: ["reearth"],
-};
+```json
+{
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "format": "prettier --write ."
+  }
+}
 ```
+
+## VSCode settings
+
+See [settings.json](.vscode/settings.json) and [extensions.json](.vscode/extensions.json).
 
 ## Config
 
-- [reearth](./index.js)
-- [reearth/common](./common.js)
-- [reearth/commonjs](./commonjs.js)
-- [reearth/typescript](./typescript.js)
-- [reearth/node](./node.js)
-- [reearth/node-commonjs](./node-commonjs.js)
-- [reearth/noprettier](./noprettier.js)
-- [reearth/prettier](./prettier.js)
-- [reearth/react](./react.js)
-- [reearth/test](./test.js)
-- [reearth/test-react](./test-react.js)
+- [reearth](./index.mjs)
+- [reearth/common](./common.mjs)
+- [reearth/commonjs](./commonjs.mjs)
+- [reearth/typescript](./typescript.mjs)
+- [reearth/node](./node.mjs)
+- [reearth/node-commonjs](./node-commonjs.mjs)
+- [reearth/noprettier](./noprettier.mjs)
+- [reearth/react](./react.mjs)
+- [reearth/test](./test.mjs)
+- [reearth/test-react](./test-react.mjs)
+
+NOTE: Using Prettier via ESLint is no longer supported. Use [prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).

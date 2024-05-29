@@ -11,7 +11,6 @@ export { default as commonjs } from "./commonjs.mjs";
 export { default as import } from "./import.mjs";
 export { default as node } from "./node.mjs";
 export { default as nodeCommonjs } from "./node-commonjs.mjs";
-export { default as prettier } from "./prettier.mjs";
 export { default as react } from "./react.mjs";
 export { default as test } from "./test.mjs";
 export { default as testReact } from "./test-react.mjs";

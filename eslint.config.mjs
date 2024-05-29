@@ -1,3 +1,3 @@
-import config from "./flat/index.mjs";
+import config from "./index.mjs";
 
 export default config;

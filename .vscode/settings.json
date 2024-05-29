@@ -1,14 +1,21 @@
 {
-  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-  // "eslint.experimental.useFlatConfig": true,
-  // "eslint.options": {
-  //   "overrideConfigFile": "eslint.config.mjs"
-  // },
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "eslint.experimental.useFlatConfig": true,
   "prettier.enable": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
