@@ -1,3 +1,4 @@
+import { fixupPluginRules } from "@eslint/compat";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 
@@ -5,7 +6,10 @@ import reactHooks from "eslint-plugin-react-hooks";
 export default [
   {
     files: ["**/*.{jsx,tsx}"],
-    plugins: { react, "react-hooks": reactHooks },
+    plugins: {
+      react,
+      "react-hooks": fixupPluginRules(reactHooks),
+    },
     settings: {
       react: {
         version: "detect",
