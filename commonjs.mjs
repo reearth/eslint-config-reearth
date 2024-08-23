@@ -1,6 +1,6 @@
 import globals from "globals";
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
+/** @type { import("eslint").Linter.Config[] } */
 export default [
   {
     files: ["**/*.{js,cjs,cts}"],

@@ -1,7 +1,7 @@
 import commonjs from "./commonjs.mjs";
 import node from "./node.mjs";
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
+/** @type { import("eslint").Linter.Config[] } */
 export default [
   ...commonjs,
   ...node,
