@@ -1,10 +1,10 @@
 import common from "./common.mjs";
+import ignores from "./ignore.mjs";
 import imp from "./imp.mjs";
 import react from "./react.mjs";
 import testReact from "./test-react.mjs";
 import test from "./test.mjs";
 import typescript from "./typescript.mjs";
-import ignores from "./ignore.mjs";
 
 export { default as browser } from "./browser.mjs";
 export { default as common } from "./common.mjs";
