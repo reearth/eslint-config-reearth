@@ -4,7 +4,7 @@ export default tseslint.config(...tseslint.configs.strict, ...tseslint.configs.s
   rules: {
     "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
     "@typescript-eslint/no-empty-function": "off",
-    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
