@@ -1,7 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
+/** @type { import("eslint").Linter.Config[] } */
 export default [
   {
     languageOptions: {

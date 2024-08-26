@@ -1,8 +1,8 @@
 import { fixupPluginRules } from "@eslint/compat";
 import eslintImport from "eslint-plugin-import";
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
-export default [
+/** @type { import("eslint").Linter.Config[] } */
+export default projectName => [
   {
     plugins: {
       import: fixupPluginRules(eslintImport),
@@ -16,7 +16,7 @@ export default [
         {
           pathGroups: [
             {
-              pattern: "@/**",
+              pattern: `@${projectName ?? null}/**`,
               group: "external",
               position: "after",
             },
@@ -27,6 +27,14 @@ export default [
             order: "asc",
             caseInsensitive: true,
           },
+        },
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          devDependencies: true,
+          optionalDependencies: true,
+          peerDependencies: true,
         },
       ],
     },

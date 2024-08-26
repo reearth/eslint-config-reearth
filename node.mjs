@@ -3,7 +3,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 
 const flatCompat = new FlatCompat();
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
+/** @type { import("eslint").Linter.Config[] } */
 export default [
   ...fixupConfigRules(flatCompat.extends("plugin:node/recommended")),
   {
@@ -12,7 +12,8 @@ export default [
       "node/no-missing-require": "off",
       "node/no-unpublished-import": "off",
       "node/no-unpublished-require": "off",
-      "node/no-unsupported-features/es-syntax": ["error", { ignores: ["modules"] }],
+      "node/no-unsupported-features/es-syntax": "off",
+      "node/no-extraneous-import": "off",
     },
   },
 ];

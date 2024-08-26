@@ -1,3 +1,12 @@
 import config from "./index.mjs";
 
-export default config;
+export default [
+  ...config(),
+  {
+    files: ["**/*.mjs"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+    },
+  },
+];

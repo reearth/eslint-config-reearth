@@ -2,10 +2,10 @@ import { fixupPluginRules } from "@eslint/compat";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
+/** @type { import("eslint").Linter.Config[] } */
 export default [
   {
-    files: ["**/*.{jsx,tsx}"],
+    files: ["**/*.{jsx,tsx,ts,js}"],
     plugins: {
       react,
       "react-hooks": fixupPluginRules(reactHooks),
