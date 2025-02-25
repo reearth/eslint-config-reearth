@@ -10,4 +10,6 @@ declare global {
   }
 }
 
-export default () => <p>aaa</p>;
+export default function Example() {
+  return <p>aaa</p>;
+}

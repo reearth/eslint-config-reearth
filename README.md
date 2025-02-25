@@ -5,8 +5,9 @@ An extensible shared ESLint config for Re:Earth projects (ESlint v9+)
 ## How to install
 
 ```
-npm install eslint prettier eslint-config-reearth --save-dev
-yarn add eslint prettier eslint-config-reearth --dev
+npm install --save-dev eslint prettier eslint-config-reearth
+yarn add --dev eslint prettier eslint-config-reearth
+pnpm install -D eslint prettier eslint-config-reearth
 ```
 
 Then edit your ESLint config file:
@@ -17,7 +18,7 @@ Then edit your ESLint config file:
 import config from "eslint-config-reearth";
 
 /** @type { import("eslint").Linter.Config[] } */
-export default [...config];
+export default [...config("projectName", { reactRecommended: true })];
 ```
 
 - Only config that uses `.mjs` is supported.
@@ -45,8 +46,6 @@ See [settings.json](.vscode/settings.json) and [extensions.json](.vscode/extensi
 - [reearth/common](./common.mjs)
 - [reearth/commonjs](./commonjs.mjs)
 - [reearth/typescript](./typescript.mjs)
-- [reearth/node](./node.mjs)
-- [reearth/node-commonjs](./node-commonjs.mjs)
 - [reearth/noprettier](./noprettier.mjs)
 - [reearth/react](./react.mjs)
 - [reearth/test](./test.mjs)

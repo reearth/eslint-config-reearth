@@ -1,11 +1,10 @@
-import { fixupPluginRules } from "@eslint/compat";
 import eslintImport from "eslint-plugin-import";
 
 /** @type { import("eslint").Linter.Config[] } */
 export default projectName => [
   {
     plugins: {
-      import: fixupPluginRules(eslintImport),
+      import: eslintImport,
     },
     rules: {
       "import/first": "warn",
@@ -16,7 +15,12 @@ export default projectName => [
         {
           pathGroups: [
             {
-              pattern: `@${projectName ?? null}/**`,
+              pattern: `@${projectName ?? ""}/**`,
+              group: "external",
+              position: "after",
+            },
+            {
+              pattern: "~/**",
               group: "external",
               position: "after",
             },

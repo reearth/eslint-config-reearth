@@ -1,14 +1,14 @@
-import { fixupPluginRules } from "@eslint/compat";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
 
 /** @type { import("eslint").Linter.Config[] } */
-export default [
+const current = [
   {
     files: ["**/*.{jsx,tsx,ts,js}"],
     plugins: {
       react,
-      "react-hooks": fixupPluginRules(reactHooks),
+      "react-hooks": reactHooks,
     },
     settings: {
       react: {
@@ -34,4 +34,29 @@ export default [
       ],
     },
   },
+  {
+    files: ["**/*.{jsx,tsx}"],
+    plugins: {
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+    },
+  },
 ];
+
+/** @type { import("eslint").Linter.Config[] } */
+export const recommended = [
+  {
+    ...current[0],
+    rules: {
+      ...react.configs.recommended.rules,
+      ...react.configs["jsx-runtime"].rules,
+      ...reactHooks.configs.recommended.rules,
+      ...current[0].rules,
+    },
+  },
+  ...current.slice(1),
+];
+
+export default current;
