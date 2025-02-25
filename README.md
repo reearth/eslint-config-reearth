@@ -7,7 +7,7 @@ An extensible shared ESLint config for Re:Earth projects (ESlint v9+)
 ```
 npm install --save-dev eslint prettier eslint-config-reearth
 yarn add --dev eslint prettier eslint-config-reearth
-pnpm install -D eslint prettier eslint-config-reearth
+pnpm add -D eslint prettier eslint-config-reearth
 ```
 
 Then edit your ESLint config file:
@@ -33,6 +33,7 @@ export default [...config("projectName", { reactRecommended: true })];
     "fix": "eslint --fix .",
     "format": "prettier --write ."
   }
+  "prettier": "eslint-config-reearth/.prettierrc.json"
 }
 ```
 
