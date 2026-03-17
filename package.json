@@ -18,20 +18,20 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "eslint": "9.21.0",
-    "prettier": "^3.5.2",
-    "typescript": "5.7.3"
+    "eslint": "9.39.4",
+    "prettier": "^3.8.1",
+    "typescript": "5.9.3"
   },
   "dependencies": {
-    "@eslint/js": "9.21.0",
-    "@vitest/eslint-plugin": "1.1.32-beta.3",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-react": "7.37.4",
-    "eslint-plugin-react-hooks": "5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "eslint-plugin-testing-library": "7.1.1",
-    "globals": "16.0.0",
-    "typescript-eslint": "8.25.0"
+    "@eslint/js": "9.39.4",
+    "@vitest/eslint-plugin": "1.6.12",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-testing-library": "7.16.0",
+    "globals": "17.4.0",
+    "typescript-eslint": "8.57.1"
   },
   "packageManager": "yarn@4.6.0"
 }
