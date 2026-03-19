@@ -1,0 +1,55 @@
+# Changelog
+
+## [0.3.9] - 2026-03-19
+
+- chore: upgrade dependencies and fix ReDoS CVE (#31)
+- docs: update readme
+- v0.3.8
+- refactor: remove outdated deps, update react config
+- v0.3.7
+- chore: upgrade dependencies (#18)
+- chore: update vscode settings and type
+- v0.3.6
+- feat: add eslint-plugin-vitest
+- chore: upgrade deps
+- chore: improvements to settings (#17)
+- v0.3.5
+- rename import
+- override @typescript-eslint/consistent-type-definitions rule
+- v0.3.4
+- fix: compat for react-hooks
+- v0.3.3
+- feat: deprecate legacy config
+- v0.3.2
+- fix: fix typescript config
+- v0.3.1
+- feat: support eslint v9
+- v0.3.0
+- feat: add flat configs
+- chore: upgrade deps
+- feat: add noprettier config
+- v0.2.4
+- fix: support cjs files, disable @typescript-eslint/prefer-optional-chain
+- v0.2.3
+- chore: upgrade deps
+- chore: add renovate json
+- v0.2.2
+- feat: add allowExpressions true to no useless fragment rule (#6)
+- feat: add no useless fragment and self closing rules (#5)
+- v0.1.1
+- update deps, fix config
+- chore: add renvoate config
+- v0.1.0
+- chore: upgrade deps
+- chore: stop using require.resolve
+- fix: remove some rules from test
+- fix: disable some rules of import
+- fix: disable slow rule
+- feat: support mts and cts
+- fix: use require.resolve
+- fix: disable no-missing-import in node config
+- fix: add node-commonjs config
+- fix: dependencies
+- docs: update readme
+- feat: add prettier config
+- chore: init project
