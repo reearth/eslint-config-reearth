@@ -56,10 +56,13 @@ jobs:
         run: |
           DATE=$(date +%Y-%m-%d)
 
-          # Find the commit that last set the current version in package.json
+          # Find the commit that bumped package.json version TO the current version
           CURRENT=${{ steps.version.outputs.current }}
           LAST_RELEASE_COMMIT=$(git log --pretty=format:"%H" -- package.json | while read sha; do
-            if git show "$sha:package.json" | grep -q "\"version\": \"$CURRENT\""; then
+            PARENT=$(git rev-parse "${sha}^" 2>/dev/null) || continue
+            CURR_VER=$(git show "${sha}:package.json" | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>console.log(JSON.parse(d).version))" 2>/dev/null)
+            PREV_VER=$(git show "${PARENT}:package.json" 2>/dev/null | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>console.log(JSON.parse(d).version))" 2>/dev/null)
+            if [ "$CURR_VER" = "$CURRENT" ] && [ "$PREV_VER" != "$CURRENT" ]; then
               echo "$sha"
               break
             fi
