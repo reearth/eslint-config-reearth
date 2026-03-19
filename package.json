@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-reearth",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "main": "index.mjs",
   "repository": "https://github.com/reearth/eslint-config-reearth.git",
   "author": "rot1024 <aayhrot@gmail.com>",
