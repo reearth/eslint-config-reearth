@@ -56,11 +56,17 @@ jobs:
         run: |
           DATE=$(date +%Y-%m-%d)
 
-          # Get the most recent tag to scope commits
-          LAST_TAG=$(git tag --sort=-version:refname | head -n 1)
+          # Find the commit that last set the current version in package.json
+          CURRENT=${{ steps.version.outputs.current }}
+          LAST_RELEASE_COMMIT=$(git log --pretty=format:"%H" -- package.json | while read sha; do
+            if git show "$sha:package.json" | grep -q "\"version\": \"$CURRENT\""; then
+              echo "$sha"
+              break
+            fi
+          done)
 
-          if [ -n "$LAST_TAG" ]; then
-            COMMITS=$(git log "${LAST_TAG}..HEAD" --pretty=format:"- %s" --no-merges)
+          if [ -n "$LAST_RELEASE_COMMIT" ]; then
+            COMMITS=$(git log "${LAST_RELEASE_COMMIT}..HEAD" --pretty=format:"- %s" --no-merges)
           else
             COMMITS=$(git log --pretty=format:"- %s" --no-merges)
           fi
