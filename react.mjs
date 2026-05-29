@@ -16,9 +16,9 @@ const current = [
       },
     },
     rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-hooks/exhaustive-deps": "warn",
       "react/prop-types": "off",
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "error",
       "react/jsx-no-useless-fragment": [
         "warn",
         {
@@ -52,7 +52,6 @@ export const recommended = [
     rules: {
       ...react.configs.recommended.rules,
       ...react.configs["jsx-runtime"].rules,
-      ...reactHooks.configs.recommended.rules,
       ...current[0].rules,
     },
   },

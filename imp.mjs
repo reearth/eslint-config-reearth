@@ -1,4 +1,4 @@
-import eslintImport from "eslint-plugin-import";
+import eslintImport from "eslint-plugin-import-x";
 
 /** @type { import("eslint").Linter.Config[] } */
 export default projectName => [
@@ -10,6 +10,7 @@ export default projectName => [
       "import/first": "warn",
       "import/newline-after-import": "warn",
       "import/no-duplicates": ["warn", { considerQueryString: true }],
+      "import/consistent-type-specifier-style": ["warn", "prefer-top-level"],
       "import/order": [
         "warn",
         {

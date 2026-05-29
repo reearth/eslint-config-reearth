@@ -1,6 +1,6 @@
 # eslint-config-reearth
 
-An extensible shared ESLint config for Re:Earth projects (ESlint v9+)
+An extensible shared ESLint config for Re:Earth projects (ESLint v10+)
 
 ## How to install
 
