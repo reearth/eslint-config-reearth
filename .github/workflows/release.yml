@@ -9,6 +9,7 @@ jobs:
   publish:
     name: Publish to npm
     runs-on: ubuntu-latest
+    environment: npm
     permissions:
       contents: write # create the GitHub Release
       id-token: write # npm trusted publishing (OIDC)
