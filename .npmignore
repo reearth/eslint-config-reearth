@@ -1,0 +1,17 @@
+# Repo-only files that consumers don't need.
+# Note: .prettierrc.json is intentionally NOT ignored (README documents
+# consuming it as `eslint-config-reearth/.prettierrc.json`).
+
+.github/
+.vscode/
+.yarn/
+.yarnrc.yml
+yarn.lock
+
+# This repo's own lint/ts setup, not part of the shared config
+eslint.config.mjs
+example.tsx
+tsconfig.json
+
+.gitignore
+*.log
